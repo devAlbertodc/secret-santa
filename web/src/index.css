@@ -13,3 +13,23 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+ /*Applies for h1, input...*/
+ @layer base {
+    svg{
+        @apply fill-current /*Fill the svg with the current text color*/
+    }
+ }
+
+ /*Applies for custom styling on individual components*/
+ @layer components{
+    .indicator {
+        @apply rounded-full center h-6 w-6 border-2 
+    }
+ }
+
+ @layer utilities{
+    .center{
+        @apply flex justify-center items-center
+    }
+ }

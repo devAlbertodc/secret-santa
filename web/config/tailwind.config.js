@@ -11,6 +11,9 @@ module.exports = {
   //But, if we add the palette inside the extend block, then you can use the Secret Santa colors AND Tailwind?s colors.
   theme: {
     extend: {
+      borderWidth: {
+        avatar: "6px"
+      },
       colors: {
         supernova: '#fac900' /* yellow / warning */,
         spicyMustard: '#6e5a0d' /* dark yellow */,
@@ -31,6 +34,12 @@ module.exports = {
         padua: '#b1e3cc' /* lightest green - placeholder color */,
         vistaBlue: '#94d1b4' /* light green - placeholder color */,
       },
+      height: {
+        18: "72px"
+      },
+      width: {
+        18: "72px"
+      }
     },
     
     //Take the first font, I?m using an array to pass it a list of fonts.
