@@ -19,12 +19,47 @@
     svg{
         @apply fill-current /*Fill the svg with the current text color*/
     }
+
+    label{
+        @apply font-handwriting uppercase text-xl tracking-tighter
+    }
+
+    /*Animation to move the placeholder to the top left of the div while user texts
+      Only applies when input is next to the label*/
+    label:has(+ input:placeholder-shown){
+        @apply text-3xl absolute top-8 left-8 pointer-events-none transition-all duration-300
+    }
+
+    /*Only applies when there is any input next to the label*/
+    label:has(+ input:focus),
+    label:has(+ input){
+        @apply absolute top-2 left-2 text-xl
+    }
+
+    /*Validation: invalid label*/
+    label:has(+ input:invalid:not(:placeholder-shown)){
+        @apply text-white
+    }
+
+    /* Invalid input */
+    input:invalid:not(:placeholder-shown){
+        @apply bg-orangeRed border-fireEngineRed
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="url"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"]{
+        @apply font-sans text-2xl h-[100px] w-full px-7 border-black border-2
+    }
  }
 
  /*Applies for custom styling on individual components*/
  @layer components{
     .indicator {
-        @apply rounded-full center h-6 w-6 border-2 
+        @apply rounded-full center h-6 w-6 border-2
     }
  }
 
