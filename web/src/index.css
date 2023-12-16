@@ -62,6 +62,24 @@
 
  /*Applies for custom styling on individual components*/
  @layer components{
+    /*Style for li inside the top nav*/
+    .top-nav li{
+        @apply font-condensed tracking-wide text-[72px] uppercase leading-none
+    }
+
+    /*Style for links inside li elements of top nav*/
+    .top-nav li a{
+        @apply hover:text-orangeRed
+    }
+
+    .bottom-nav ul{
+        @apply flex flex-col gap-3
+    }
+
+    .bottom-nav ul a{
+        @apply hover:text-orangeRed
+    }
+
     .indicator {
         @apply rounded-full center h-6 w-6 border-2
     }
