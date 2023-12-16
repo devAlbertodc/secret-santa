@@ -11,6 +11,9 @@ module.exports = {
   //But, if we add the palette inside the extend block, then you can use the Secret Santa colors AND Tailwind?s colors.
   theme: {
     extend: {
+      backgroundImage: {
+        auth: 'url("/images/bg__auth.svg")',
+      },
       borderWidth: {
         avatar: "6px"
       },
