@@ -62,6 +62,20 @@
 
  /*Applies for custom styling on individual components*/
  @layer components{
+
+    .dropdown {
+        @apply relative top-6 left-6
+    }
+
+    .dropdown:before {
+        content: "";
+        @apply border-[12px] border-transparent border-b-white absolute -top-6 left-8
+    }
+
+    .dropdown li{
+        @apply font-condensed text-3xl uppercase text-black flex items-center gap-3
+    }
+
     /*Style for li inside the top nav*/
     .top-nav li{
         @apply font-condensed tracking-wide text-[72px] uppercase leading-none
