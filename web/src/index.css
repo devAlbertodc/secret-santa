@@ -16,6 +16,10 @@
 
  /*Applies for h1, input...*/
  @layer base {
+    main{
+        @apply z-10 relative mb-[350px] overflow-scroll
+    }
+
     svg{
         @apply fill-current /*Fill the svg with the current text color*/
     }
