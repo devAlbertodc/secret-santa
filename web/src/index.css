@@ -50,6 +50,23 @@
         @apply bg-orangeRed border-fireEngineRed
     }
 
+    /*Checkbox*/
+    input[type="checkbox"]{
+        @apply hidden
+    }
+
+    input[type="checkbox"]+label{
+        @apply flex items-center gap-4 cursor-pointer
+    }
+
+    input[type="checkbox"] + label::before{
+        @apply content-[''] w-10 h-10 block bg-unchecked
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        @apply content-[''] w-10 h-10 block bg-checked
+    }
+
     input[type="text"],
     input[type="password"],
     input[type="url"],
@@ -62,6 +79,10 @@
 
  /*Applies for custom styling on individual components*/
  @layer components{
+
+    .field{
+        @apply mb-4
+    }
 
     .dropdown {
         @apply relative top-6 left-6
