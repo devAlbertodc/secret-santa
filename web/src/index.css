@@ -45,6 +45,12 @@
         @apply text-white
     }
 
+    /**/
+    button[type="submit"],
+    input[type="submit"]{
+        @apply bg-supernova font-handwriting uppercase text-3xl w-full rounded-full py-5
+    }
+
     /* Invalid input */
     input:invalid:not(:placeholder-shown){
         @apply bg-orangeRed border-fireEngineRed
@@ -79,6 +85,21 @@
 
  /*Applies for custom styling on individual components*/
  @layer components{
+    h1.page-title{
+        @apply font-condensed m-0 p-0 text-center text-[116px] leading-[0.8] text-white
+    }
+
+    .with-rulers{
+        @apply flex items-center gap-7 justify-center
+    }
+
+    .with-rulers::before,
+    .with-rulers::after
+    {
+        content: '';
+        @apply w-[72px] h-[6px] bg-current block
+    }
+
 
     .field{
         @apply mb-4
